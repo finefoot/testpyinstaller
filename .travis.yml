@@ -1,0 +1,8 @@
+os: windows
+
+language: shell
+
+script:
+  - dir
+  - choco install python3
+  - python --version
