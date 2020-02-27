@@ -4,8 +4,13 @@ language: shell
 
 script:
   - dir
-  - choco install python3
+  - echo %PATH%
+  - set PATH=/c/Python38:/c/Python38/Scripts:$PATH
+  - echo %PATH%
+  - choco install python3 --version 3.8.0
   - python --version
   - python -m pip install --upgrade pip
-  - PATH=/c/Python38:/c/Python38/Scripts:$PATH
+  - echo %PATH%
+  - set PATH=/c/Python38:/c/Python38/Scripts:$PATH
+  - echo %PATH%
   - python program.py
